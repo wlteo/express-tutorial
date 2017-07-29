@@ -1,7 +1,8 @@
-<link rel="stylesheet" type="text/css" href="styles.css">
+<% include partials/header %>
 
-<h1>Ma List</h1>
+  <h1>My List</h1>
+  <% list.forEach(function(item) { %>
+    <li><%= item.name %></li>
+  <% }) %>
 
-<% list.forEach(function(item) { %>
-  <li><%= item.name %></li>
-<% }) %>
+<% include partials/footer %>
